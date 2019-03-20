@@ -26,11 +26,12 @@ public class aim : MonoBehaviour
         if(gameObject.tag=="turret_right"){
             //-------------La rotacion va de 5 a 70, por cambio de pivot
             BoundRotationRight = (transform.rotation.z) * 100f;
-            Debug.Log("holaaaa"+BoundRotationRight); 
+            Debug.Log(BoundRotationRight); 
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                
-                if(BoundRotationRight<=-10){
+                //transform.Rotate(Vector3.forward * -moveSpeed * Time.deltaTime);
+
+                if (BoundRotationRight>=-40){
                     transform.Rotate(Vector3.forward * -moveSpeed * Time.deltaTime);
                 }
                 else
@@ -41,8 +42,9 @@ public class aim : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                
-                if(BoundRotationRight>=-50)
+                //transform.Rotate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+                if (BoundRotationRight<=-10)
                 {
                     transform.Rotate(Vector3.forward * moveSpeed * Time.deltaTime);
                 }

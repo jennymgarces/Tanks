@@ -17,7 +17,7 @@ public class EcharHumo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.getButtonDown("Fire"))
-            animator.setBool("atacar",true);
+        if (Input.GetButtonDown("Fire"))
+            animator.SetBool("atacar",true);
     }
 }
