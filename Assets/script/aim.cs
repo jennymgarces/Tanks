@@ -61,7 +61,7 @@ public class aim : MonoBehaviour
             //Debug.Log(); 
             if (Input.GetKey(KeyCode.W))
             {
-                if(BoundRotation<=70){
+                if(BoundRotation<=40){
                     transform.Rotate(Vector3.forward * moveSpeed * Time.deltaTime);
                 }
                 else
@@ -72,7 +72,7 @@ public class aim : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.S))
             {
-                if(BoundRotation>=5)
+                if(BoundRotation>=10)
                 {
                     transform.Rotate(Vector3.forward * - moveSpeed * Time.deltaTime);
                 }
